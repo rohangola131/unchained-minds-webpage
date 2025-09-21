@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unchained Minds</title>
+  
+</head>
+<body>
+  <!-- Hamburger Menu -->
+  <div class="hamburger-menu card" id="hamburgerMenu">
+  <button class="hamburger-toggle card-toggle" id="hamburgerToggle" style="position:fixed;top:2.2rem;right:2.2rem;z-index:2101;">☰</button>
+    <div class="hamburger-content card-content" id="hamburgerContent">
+      <a href="#home" class="menu-link">Home</a>
+      <a href="#about" class="menu-link">About</a>
+      <a href="#community" class="menu-link">Community</a>
+      <a href="#contact" class="menu-link">Contact</a>
+    </div>
+  </div>
+  <div class="background"></div>
+
+  <!-- Main Section -->
+  <script>
+    // Hamburger menu toggle logic for fullscreen overlay
+    const hamburgerToggle = document.getElementById('hamburgerToggle');
+    const hamburgerMenu = document.getElementById('hamburgerMenu');
+    const hamburgerContent = document.getElementById('hamburgerContent');
+    hamburgerToggle.addEventListener('click', function(e) {
+      e.stopPropagation();
+      hamburgerMenu.classList.toggle('expanded');
+    });
+    document.addEventListener('click', function(e) {
+      if (!hamburgerMenu.contains(e.target) && hamburgerMenu.classList.contains('expanded')) {
+        hamburgerMenu.classList.remove('expanded');
+      }
+    });
+  </script>
+  <section class="main-section" id="home">
+    <header>
+      <img src="1000028860-removebg-preview.png" alt="Unchained Minds Logo">
+      <h1>Unchained Minds</h1>
+    </header>
+
+    <p>
+      A community of free thinkers, innovators, and creators.  
+      Breaking mental chains and unlocking true potential.
+    </p>
+
+    <div class="button-container">
+      <a href="https://t.me/non_limitor" class="glow-btn telegram-btn" target="_blank" rel="noopener">
+        <span class="btn-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 240 240" fill="none">
+            <circle cx="120" cy="120" r="120" fill="#229ED9"/>
+            <path d="M180.5 72.5L157.5 176.5C155.5 184.5 150.5 186.5 143.5 182.5L110.5 158.5L94.5 173.5C92.5 175.5 91 177 87.5 177L89.5 146.5L157.5 84.5C160.5 81.5 157.5 80.5 153.5 83.5L75.5 137.5L46.5 128.5C39.5 126.5 39.5 121.5 48.5 118.5L170.5 74.5C176.5 72.5 181.5 76.5 180.5 72.5Z" fill="white"/>
+          </svg>
+        </span>
+        Join Telegram
+      </a>
+
+      <a href="https://instagram.com/your_handle" class="glow-btn instagram-btn" target="_blank" rel="noopener">
+        <span class="btn-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none">
+            <rect x="2" y="2" width="20" height="20" rx="6" ry="6" stroke="white" stroke-width="2"/>
+            <circle cx="12" cy="12" r="4" stroke="white" stroke-width="2"/>
+            <circle cx="18" cy="6" r="1.5" fill="white"/>
+          </svg>
+        </span>
+        Follow Instagram
+      </a>
+
+      <a href="#about" class="btn-outline" id="learnMoreBtn">Learn More</a>
+    </div>
+
+    <div class="scroll-indicator">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="#00c853">
+        <path d="M12 16l-6-6h12l-6 6z"/>
+      </svg>
+    </div>
+
+  </section>
+
+  <!-- About Section -->
+  <section class="about-section" id="about">
+    <header>
+      <img src="1000028860-removebg-preview.png" alt="Unchained Minds Logo">
+      <h1>Truth seekers</h1>
+    </header>
+
+    <!-- Welcome Card -->
+    <div class="card" onclick="toggleCard(this)">
+      <div class="card-header">
+        <h3 class="card-title">Welcome to Unchained Minds</h3>
+        <button class="card-toggle">+</button>
+      </div>
+      <div class="card-content">
+        <p class="card-text">
+          We are a revolutionary community dedicated to breaking the barriers of conventional thinking. 
+          Our mission is to empower individuals to transcend limitations, explore innovative ideas, 
+          and create meaningful impact in their lives and communities. Join us in this journey of 
+          intellectual liberation and creative expression where minds are free to explore, create, and innovate.
+        </p>
+      </div>
+    </div>
+
+    <!-- Community Rules Card -->
+    <div class="card" onclick="toggleCard(this)">
+      <div class="card-header">
+        <h3 class="card-title">Community Rules</h3>
+        <button class="card-toggle">+</button>
+      </div>
+      <div class="card-content">
+        <p class="card-text">
+          <strong>1.</strong> Respect all members and their diverse perspectives<br><br>
+          <strong>2.</strong> No spam or self-promotional content without permission<br><br>
+          <strong>3.</strong> Keep discussions constructive and meaningful<br><br>
+          <strong>4.</strong> Share knowledge and support fellow community members<br><br>
+          <strong>5.</strong> Report any inappropriate behavior to moderators<br><br>
+          <strong>6.</strong> Embrace open-mindedness and intellectual curiosity
+        </p>
+      </div>
+    </div>
+
+    <!-- Vision Card -->
+    <div class="card" onclick="toggleCard(this)">
+      <div class="card-header">
+        <h3 class="card-title">Our Vision</h3>
+        <button class="card-toggle">+</button>
+      </div>
+      <div class="card-content">
+        <p class="card-text">
+          To create a global network of free thinkers who challenge the status quo, 
+          foster innovation, and drive positive change. We believe that when minds are 
+          unchained from limiting beliefs and societal constraints, extraordinary 
+          breakthroughs become possible. Together, we're building a future where 
+          creativity and critical thinking lead the way to unprecedented achievements and discoveries.
+        </p>
+      </div>
+    </div>
+
+    <footer>
+      Unchained Minds. A Free thinkers community.
+    </footer>
+  </section>
+
+  <div id="R"><a class="fixed-logo" href="https://t.me/lost_herobrine">R</a></div>
+
+  <script>
+    // Card toggle functionality
+    function toggleCard(card) {
+      card.classList.toggle('expanded');
+      
+      // Enhanced animation effect
+      if (card.classList.contains('expanded')) {
+        card.style.background = 'rgba(25, 30, 40, 0.98)';
+        card.style.borderColor = 'rgba(255, 102, 0, 0.5)';
+      } else {
+        card.style.background = 'rgba(20, 25, 35, 0.95)';
+        card.style.borderColor = 'rgba(255, 255, 255, 0.15)';
+      }
+    }
+
+    // Enhanced interactive effects
+    document.addEventListener('DOMContentLoaded', function() {
+      // Animate cards on scroll
+      const cards = document.querySelectorAll('.card');
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
+      };
+
+      const cardObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => {
+              entry.target.style.opacity = '1';
+              entry.target.style.transform = 'translateY(0)';
+            }, index * 200);
+          }
+        });
+      }, observerOptions);
+
+      cards.forEach((card) => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(50px)';
+        card.style.transition = 'all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+        cardObserver.observe(card);
+      });
+
+      // Enhanced ripple effect for buttons
+      const buttons = document.querySelectorAll('.glow-btn, .btn-outline');
+      buttons.forEach(button => {
+        button.addEventListener('click', function(e) {
+          const ripple = document.createElement('div');
+          const rect = this.getBoundingClientRect();
+          const size = Math.max(rect.width, rect.height);
+          
+          ripple.style.cssText = `
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.4);
+            transform: scale(0);
+            animation: ripple 0.8s ease-out;
+            width: ${size}px;
+            height: ${size}px;
+            left: ${e.clientX - rect.left - size / 2}px;
+            top: ${e.clientY - rect.top - size / 2}px;
+            pointer-events: none;
+          `;
+          
+          this.appendChild(ripple);
+          
+          setTimeout(() => {
+            ripple.remove();
+          }, 800);
+        });
+      });
+
+      // Smooth scrolling for learn more button
+      document.getElementById('learnMoreBtn').addEventListener('click', function(e) {
+        e.preventDefault();
+        document.getElementById('about').scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      });
+
+      // Hide scroll indicator when scrolling
+      window.addEventListener('scroll', function() {
+        const indicator = document.querySelector('.scroll-indicator');
+        if (window.scrollY > 100) {
+          indicator.style.opacity = '0';
+        } else {
+          indicator.style.opacity = '0.7';
+        }
+      });
+    });
+
+    // CSS for enhanced ripple animation
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes ripple {
+        to {
+          transform: scale(3);
+          opacity: 0;
+        }
+      }
+      .glow-btn, .btn-outline {
+        position: relative;
+        overflow: hidden;
+      }
+    `;
+    document.head.appendChild(style);
+  </script>
+</body>
+</html>
